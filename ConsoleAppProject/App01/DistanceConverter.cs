@@ -6,7 +6,7 @@ namespace ConsoleAppProject.App01
     /// Please describe the main features of this App
     /// </summary>
     /// <author>
-    /// Derek version 0.1
+    /// Derek version 1.0
     /// </author>
     public class DistanceConverter
     {
@@ -22,26 +22,52 @@ namespace ConsoleAppProject.App01
             OutputFeet();
         }
 
-        private void OutputFeet()
+        private void InputMiles()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.Write(" Please enter the distance in miles > ");
+            
+            string value = Console.ReadLine();
+            miles = Convert.ToDouble(value);
         }
 
         private void CalculateFeet()
         {
-            throw new NotImplementedException();
+            feet = miles * FEET_IN_MILE;
         }
 
-        private void InputMiles()
+        private void OutputFeet()
         {
-            throw new NotImplementedException();
+            Console.WriteLine();
+            Console.WriteLine(" The number of feet is " + feet.ToString());
+            Console.WriteLine();
         }
 
+        /// <summary>
+        /// This method outputs a suitable heading for
+        /// user to identify the application
+        /// </summary>
         private void OutputHeading()
         {
-            Console.WriteLine("-----------------------------");
-            Console.WriteLine("   App01 Distance Converter");
-            Console.WriteLine("-----------------------------");
+            Console.WriteLine(" ------------------------------");
+            Console.WriteLine("    App01 Distance Converter");
+            Console.WriteLine("        by Derek Peacock");
+            Console.WriteLine(" ------------------------------");
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// This method will output a short description
+        /// of what the application does.
+        /// </summary>
+        private void OutputDescription()
+        {
+            Console.WriteLine(
+                " This application will convert a distance\n" +
+                " entered in miles to the same distance\n" +
+                " measured in feet");
+            
+            Console.WriteLine();
         }
     }
 }
