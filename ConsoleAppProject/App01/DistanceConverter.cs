@@ -17,6 +17,8 @@ namespace ConsoleAppProject.App01
         public void Run()
         {
             OutputHeading();
+            OutputDescription();
+
             InputMiles();
             CalculateFeet();
             OutputFeet();
@@ -39,7 +41,7 @@ namespace ConsoleAppProject.App01
         private void OutputFeet()
         {
             Console.WriteLine();
-            Console.WriteLine(" The number of feet is " + feet.ToString());
+            Console.WriteLine(" " + miles + " miles is " + feet + " feet");
             Console.WriteLine();
         }
 
@@ -49,10 +51,10 @@ namespace ConsoleAppProject.App01
         /// </summary>
         private void OutputHeading()
         {
-            Console.WriteLine(" ------------------------------");
-            Console.WriteLine("    App01 Distance Converter");
-            Console.WriteLine("        by Derek Peacock");
-            Console.WriteLine(" ------------------------------");
+            Console.WriteLine("     ------------------------------");
+            Console.WriteLine("        App01 Distance Converter");
+            Console.WriteLine("            by Derek Peacock");
+            Console.WriteLine("     ------------------------------");
             Console.WriteLine();
         }
 
