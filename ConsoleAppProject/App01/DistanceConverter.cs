@@ -11,17 +11,27 @@ namespace ConsoleAppProject.App01
     public class DistanceConverter
     {
         public static double FEET_IN_MILE = 5280;
+        public static double METERS_IN_MILE = 1609.34;
 
-        private double miles, feet;
+        private double miles, feet, meters;
 
         public void Run()
         {
             OutputHeading();
             OutputDescription();
 
-            InputMiles();
-            CalculateFeet();
-            OutputFeet();
+            // Convert Miles to Feet
+
+            //InputMiles();
+            //CalculateFeet();
+            //OutputFeet();
+
+            // Convert Feet to Miles
+
+            InputFeet();
+            CalculateMiles();
+            OutputMiles();
+
         }
 
         private void InputMiles()
@@ -42,6 +52,28 @@ namespace ConsoleAppProject.App01
         {
             Console.WriteLine();
             Console.WriteLine(" " + miles + " miles is " + feet + " feet");
+            Console.WriteLine();
+        }
+
+
+        private void InputFeet()
+        {
+            Console.WriteLine();
+            Console.Write(" Please enter the distance in feet > ");
+
+            string value = Console.ReadLine();
+            feet = Convert.ToDouble(value);
+        }
+
+        private void CalculateMiles()
+        {
+            miles = feet / FEET_IN_MILE;
+        }
+
+        private void OutputMiles()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" " + feet + " feet is " + miles + " miles");
             Console.WriteLine();
         }
 
