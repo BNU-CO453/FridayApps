@@ -28,9 +28,15 @@ namespace ConsoleAppProject.App01
 
             // Convert Feet to Miles
 
-            InputFeet();
-            CalculateMiles();
-            OutputMiles();
+            //InputFeet();
+            //CalculateMiles();
+            //OutputMiles();
+
+            // Convert Miles to Meters
+
+            InputMiles();
+            CalculateMeters();
+            OutputMeters();
 
         }
 
@@ -75,6 +81,18 @@ namespace ConsoleAppProject.App01
             Console.WriteLine();
             Console.WriteLine(" " + feet + " feet is " + miles + " miles");
             Console.WriteLine();
+        }
+
+        private void OutputMeters()
+        {
+            Console.WriteLine();
+            Console.WriteLine(" " + miles + " miles is " + meters + " meters");
+            Console.WriteLine();
+        }
+
+        private void CalculateMeters()
+        {
+            meters = miles * METERS_IN_MILE;
         }
 
         /// <summary>
