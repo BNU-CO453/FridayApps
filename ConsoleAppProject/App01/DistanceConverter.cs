@@ -3,7 +3,8 @@
 namespace ConsoleAppProject.App01
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// Please describe the main features of this 
+    /// App here in a few lines.
     /// </summary>
     /// <author>
     /// Derek version 1.0
@@ -15,6 +16,13 @@ namespace ConsoleAppProject.App01
 
         private double miles, feet, meters;
 
+        /// <summary>
+        /// This method will output a heading for the
+        /// application, a short description and then
+        /// it will ask the user to enter a distance 
+        /// in one unit and convert and output an 
+        /// equivalent distance in another unit.
+        /// </summary>
         public void Run()
         {
             OutputHeading();
@@ -22,22 +30,21 @@ namespace ConsoleAppProject.App01
 
             // Convert Miles to Feet
 
-            //InputMiles();
-            //CalculateFeet();
-            //OutputFeet();
+            InputMiles();
+            CalculateFeet();
+            OutputFeet();
 
             // Convert Feet to Miles
 
-            //InputFeet();
-            //CalculateMiles();
-            //OutputMiles();
+            InputFeet();
+            CalculateMiles();
+            OutputMiles();
 
             // Convert Miles to Meters
 
             InputMiles();
             CalculateMeters();
             OutputMeters();
-
         }
 
         private void InputMiles()
@@ -49,6 +56,10 @@ namespace ConsoleAppProject.App01
             miles = Convert.ToDouble(value);
         }
 
+        /// <summary>
+        /// This method is so hort it does not
+        /// need a comment.
+        /// </summary>
         private void CalculateFeet()
         {
             feet = miles * FEET_IN_MILE;
