@@ -22,11 +22,41 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.WriteLine(" =================================================");
             Console.WriteLine("    BNU CO453 Applications Programming 2022-2023! ");
+            Console.WriteLine("                by Derek Peacock");
             Console.WriteLine(" =================================================");
             Console.WriteLine();
 
+            SelectApp();
+        }
+
+        public static void SelectApp()
+        {
             DistanceConverter converter = new DistanceConverter();
-            converter.Run();
+
+            string[] choices =
+            {
+                "App01: Distance Converter",
+                "App02: BMI Calculator",
+                "App03: Student Grades",
+                "App04: Network App",
+                "Quit"
+            };
+
+            bool quit = false;
+
+            while (quit != true)
+            {
+                int choice = ConsoleHelper.SelectChoice(choices);
+
+                switch (choice)
+                {
+                    case 1: converter.Run(); break;
+                    case 2: break;
+                    case 3: break;
+                    case 4: break;
+                    case 5: quit = true; break;
+                }
+            }
         }
     }
 }

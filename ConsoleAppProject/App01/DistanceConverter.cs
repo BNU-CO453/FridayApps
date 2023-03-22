@@ -11,15 +11,36 @@ namespace ConsoleAppProject.App01
     public class DistanceConverter
     {
         public static double FEET_IN_MILE = 5280;
+        public static double METER_IN_MILE = 1609.34;
 
-        private double miles, feet;
+        private double miles, meters, feet;
 
         public void Run()
         {
             OutputHeading();
+
             InputMiles();
             CalculateFeet();
             OutputFeet();
+
+            InputFeet();
+            CalculateMiles();
+            OutputMiles();
+        }
+
+        private void OutputMiles()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CalculateMiles()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void InputFeet()
+        {
+            throw new NotImplementedException();
         }
 
         private void OutputFeet()
