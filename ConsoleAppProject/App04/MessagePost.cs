@@ -40,11 +40,11 @@ namespace ConsoleAppProject.App04
         ///</summary>
         public void Display()
         {
+            base.Display();
+
             Console.WriteLine();
             Console.WriteLine($"    Author: {Username}");
             Console.WriteLine($"    Message: {Message}");
          }
-
-
     }
 }
