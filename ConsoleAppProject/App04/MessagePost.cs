@@ -26,9 +26,8 @@ namespace ConsoleAppProject.App04
         /// <param name="text">
         /// The text of this post.
         /// </param>
-        public MessagePost(string userName, string message)
+        public MessagePost(string userName, string message):base(userName)
         {
-            base.Username = userName;
             Message = message;
         }
 
