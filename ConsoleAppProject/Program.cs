@@ -1,5 +1,6 @@
 ﻿using ConsoleAppProject.App01;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using ConsoleAppProject.Helpers;
 using System;
 
@@ -32,6 +33,7 @@ namespace ConsoleAppProject
         public static void SelectApp()
         {
             DistanceConverter converter = new DistanceConverter();
+            PostsUI app04 = new PostsUI();
 
             string[] choices =
             {
@@ -53,7 +55,7 @@ namespace ConsoleAppProject
                     case 1: converter.Run(); break;
                     case 2: break;
                     case 3: break;
-                    case 4: break;
+                    case 4: app04.Run(); break;
                     case 5: quit = true; break;
                 }
             }
