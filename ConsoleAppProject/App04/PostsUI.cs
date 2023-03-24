@@ -11,6 +11,8 @@ namespace ConsoleAppProject.App04
     /// </summary>
     public class PostsUI
     {
+        private NewsFeed news = new NewsFeed();
+
         public void Run()
         {
             ConsoleHelper.OutputHeading("App04: My Social Network");
@@ -43,7 +45,7 @@ namespace ConsoleAppProject.App04
 
         private void DisplayAllPosts()
         {
-            throw new NotImplementedException();
+            news.Display();
         }
 
         private void AddPhoto()
@@ -53,7 +55,21 @@ namespace ConsoleAppProject.App04
 
         private void AddMesage()
         {
-            
+            string name = GetUserName(); 
+
+            Console.Write("Please enter your message > ");
+            string message = Console.ReadLine();
+
+            MessagePost post = new MessagePost(name, message);
+            news.AddMessagePost(post);
+        }
+
+        private string GetUserName()
+        {
+            Console.Write("Pleas enter your name > ");
+            string name = Console.ReadLine();
+
+            return name;
         }
     }
 }
