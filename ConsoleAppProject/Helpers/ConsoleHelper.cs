@@ -2,7 +2,6 @@
 
 namespace ConsoleAppProject.Helpers
 {
-
     /// <summary>
     /// This is a general purpose class containing methods
     /// that can be used by other console based classes.
