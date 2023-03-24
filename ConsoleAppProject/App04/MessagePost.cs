@@ -43,27 +43,7 @@ namespace ConsoleAppProject.App04
             Console.WriteLine();
             Console.WriteLine($"    Author: {Username}");
             Console.WriteLine($"    Message: {Message}");
-            Console.WriteLine($"    Time Elpased: {FormatElapsedTime(Timestamp)}");
-            Console.WriteLine();
-
-            if (likes > 0)
-            {
-                Console.WriteLine($"    Likes:  {likes}  people like this.");
-            }
-            else
-            {
-                Console.WriteLine();
-            }
-
-            if (comments.Count == 0)
-            {
-                Console.WriteLine("    No comments.");
-            }
-            else
-            {
-                Console.WriteLine($"    {comments.Count}  comment(s). Click here to view.");
-            }
-        }
+         }
 
 
     }
